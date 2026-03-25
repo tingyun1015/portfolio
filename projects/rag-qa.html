@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG-based QA Assistant | Tingyun Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    
+    <header class="project-hero hero-rag-qa">
+        <div class="hero-bg-wrapper">
+            <img src="../assets/images/rag-project_image.png" alt="RAG-QA Background" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-date">Nov. 2025 - Dec. 2025</div>
+            <h1 class="hero-title">RAG-based QA Assistant (Teamwork)</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="project-details-container">
+        <a href="../index.html" class="btn-link back-link-adjusted">← Back to Home</a>
+        <section>
+            <h2 class="project-section-heading">Background</h2>
+            <h3 class="project-subheading">Text-based Retrieval-Augmented Generation System</h3>
+            <p class="project-paragraph">As part of the <i>“Web Search and Mining”</i> module at NCCU, our team architected a comprehensive text-based Retrieval-Augmented Generation system. We implemented agentic retrieval workflows alongside router-based query planning strategies to optimise retrieval accuracy. Within this collaborative effort, I applied my full-stack expertise to build custom web-based visualisation and prompt-testing tools, which significantly accelerated our team's evaluation and iteration cycles.</p>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Tech Stack</h2>
+            <h3 class="project-subheading">Python, LLM Orchestration (Ollama), Vector Search (FAISS), Docker, SQLite</h3>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Project Repository</h2>
+            <a href="https://github.com/tingyun1015/WSM-Final_Project_RAG" target="_blank" class="btn-link btn-link-large">https://github.com/tingyun1015/WSM-Final_Project_RAG</a>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Task Requirement</h2>
+            <p class="project-paragraph">For this project, we formed a four-person team tasked with building a RAG system capable of answering queries based on provided documents within a strict one-month timeframe. We were required to use Ollama as our model provider, specifically constrained to the granite4:3b model in a local environment.</p>
+        </section>
+        <section>
+            <h2 class="project-section-heading">My Main Contribution</h2>
+            
+            <h3 class="project-subheading pt-1-5">Leading the Team via Agile Methodologies</h3>
+            
+            <h3 class="project-sub-subheading">Introducing Backlogs and Kanban Boards</h3>
+            <p class="project-paragraph">I introduced straightforward agile management frameworks to the team, utilising a product backlog for task specification and a Kanban board to track our progress. We integrated these tools into our online meetings to ensure strategic alignment and foster highly effective collaboration, which ultimately drove the successful delivery of the project.</p>
+            
+            <h3 class="project-sub-subheading">Structuring Project Progression</h3>
+            <p class="project-paragraph">As the project had to be built from the ground up, I structured our development cycle into three distinct phases. We initially dedicated several weeks to research and trials, which culminated in formulating the core architecture. Following this, I implemented a breakdown strategy to address different categories of questions sequentially, ensuring we could systematically deliver the final product.</p>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Design Router-base Architecture</h2>
+            <p class="project-paragraph">Following our initial research phase, we identified specific recurrent patterns within the documents and queries. Consequently, I devised a robust routing strategy to handle these varied matched patterns. The system processes queries individually, relying on the Router to dynamically dispatch each query to its appropriate processing chain:</p>
+            
+            <img src="../assets/images/rag-project_architechture.png" alt="RAG Router Architecture" class="architecture-img">
+            
+            <ul class="project-list">
+                <li class="project-list-item">
+                    <strong>Summary-Router Chain</strong>
+                    <ul class="project-sub-list">
+                        <li>Handles queries that match summary-related syntax.</li>
+                        <li>This chain mainly addresses “Summary Questions”.</li>
+                    </ul>
+                </li>
+                <li class="project-list-item">
+                    <strong>Name-Router Chain</strong>
+                    <ul class="project-sub-list">
+                        <li>Handles queries that match exactly one or two documents.</li>
+                        <li>This chain mainly addresses “Factual Questions” and “Multi-hop Reasoning Questions” with a single document path; while multiple document matches deal with “Multi-doc Info Integration Questions”, “Multi-doc Comparison Questions”, and “Multi-doc Time Sequence Questions”.</li>
+                    </ul>
+                </li>
+                <li class="project-list-item">
+                    <strong>LLM-Router Chain</strong>
+                    <ul class="project-sub-list">
+                        <li>Serves as a fallback for all other queries, which are handled directly by the LLM.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Build Development Tools</h2>
+            
+            <h3 class="project-sub-subheading">Score Dashboard</h3>
+            <p class="project-paragraph">I developed a Score Dashboard to visualise experimental results in a tabular format, enabling straightforward comparison of results from each execution, including scores and their corresponding generated answers. This representation made it easier to evaluate and compare the performance of various strategies and configurations.</p>
+            <h3 class="project-sub-subheading mt-2">Prompt Playground</h3>
+            <p class="project-paragraph">I set up a web-based playground for quick experimentation with the LLM, allowing us to test and optimise prompt design and configuration settings.</p>
+        </section>
+
+        <section>
+            <h2 class="project-section-heading">Results</h2>
+            <p class="project-paragraph">Competing against seven groups, we ultimately secured <strong>second prize</strong> for this intensive one-month project. This experience provided me with invaluable insight into building RAG systems from the ground up. Further details can be found in our:</p>
+            
+            <div class="project-actions">
+                <a href="https://github.com/tingyun1015/WSM-Final_Project_RAG/blob/main/docs/slides.pdf" target="_blank" class="btn-link btn-link-large">Slides</a>
+                <a href="https://github.com/tingyun1015/WSM-Final_Project_RAG/blob/main/docs/report.pdf" target="_blank" class="btn-link btn-link-large">Final Report</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Download CV Button -->
+    <a href="../assets/CV_20260325.pdf" class="download-cv-floating" target="_blank" download="Tingyun_Cheng_CV.pdf">Download CV</a>
+    <script src="../js/main.js"></script>
+</body>
+</html>

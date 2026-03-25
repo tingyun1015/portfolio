@@ -1,0 +1,118 @@
+/* =========================================================================
+   ZERO CSS RESET
+   ========================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* =========================================================================
+   CSS VARIABLES & THEMING
+   ========================================================================= */
+:root {
+    /* Colors matches Figma design */
+    --bg-color: #f8f4e9;
+    --text-primary: #2f2c2b;
+    --text-heading: #0b5b89;
+    --accent-orange: #ea7d18;
+
+    /* Typography */
+    --font-main: 'Noto Sans', sans-serif;
+}
+
+/* =========================================================================
+   GLOBAL STYLES
+   ========================================================================= */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: normal;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-heading);
+}
+
+.btn-link {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.btn-link:hover {
+    color: #c96711;
+}
+
+.download-cv-floating {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #2f2c2b;
+    color: white;
+    border-radius: 45px;
+    padding: 15px 30px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    z-index: 1000;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.download-cv-floating:hover {
+    background-color: #1a1818;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1023px) {
+    .download-cv-floating {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 24px;
+    }
+}
