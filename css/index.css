@@ -20,7 +20,7 @@
     }
 
     .left-column {
-        width: 45%;
+        width: 40%;
         position: sticky;
         top: 4rem;
         height: calc(100vh - 8rem);
@@ -38,7 +38,7 @@
     }
 
     .right-column {
-        width: 55%;
+        width: 60%;
     }
 }
 
@@ -68,45 +68,64 @@
     display: block;
 }
 
-.name-title {
-    font-size: 1.3rem;
-    font-weight: 900;
-    letter-spacing: -0.48px;
-    margin-bottom: 0.2rem;
-}
-
-.role-title {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-}
-
-.role-subtitle {
-    font-size: 0.8125rem;
-    font-weight: 700;
-    letter-spacing: -0.3px;
-}
-
 .bio-text {
-    font-size: 0.8125rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--text-primary);
     letter-spacing: -0.24px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    max-width: 442px;
-    line-height: 1.4;
+    max-width: 460px;
+    line-height: 1.5;
+}
+
+.name-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: -0.48px;
+    margin-bottom: 0.25rem;
+}
+
+.bio-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.24px;
 }
 
 .skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    font-size: 0.8125rem;
-    letter-spacing: -0.24px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0;
+    align-items: stretch;
+    font-size: 0.85rem;
+    letter-spacing: -0.1px;
     color: var(--text-primary);
     font-weight: 500;
+    margin: 0;
+    /* border: 1px solid #e0e4e8; */
+    overflow: hidden;
+}
+
+.skills-list dt,
+.skills-list dd {
+    padding: 0.4rem 0.6rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e4e8;
+}
+
+.skills-list dt:nth-last-of-type(1),
+.skills-list dd:nth-last-of-type(1) {
+    border-bottom: none;
+}
+
+.skills-list dt {
+    font-weight: 600;
+    /* background-color: #f8f9fa; */
+    /* border-right: 1px solid #e0e4e8; */
 }
 
 .skills-list strong {
@@ -122,8 +141,56 @@
 /* =========================================================================
    RIGHT COLUMN (Timeline & Projects)
    ========================================================================= */
+.right-column {
+    position: relative;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
 .timeline-item {
-    margin-bottom: 4rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .right-column {
+        padding-left: 3rem; 
+    }
+
+    .right-column::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        bottom: -100px;
+        left: 1rem;
+        transform: translateX(-50%);
+        width: 10px;
+        background: linear-gradient(to bottom, rgba(193, 196, 199, 0.5), rgba(152, 155, 159, 0.8));
+        z-index: 0;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -2rem;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        background-color: #f8f4e9;
+        border: 6px solid rgb(255, 111, 0);
+        border-radius: 50%;
+        z-index: 2;
+        box-shadow: 0 0px 10px rgba(62, 60, 58, 0.3);
+    }
+
+    .timeline-item {
+        margin-bottom: 7rem;
+    }
+
+    .timeline-item:last-child {
+        margin-bottom: 0rem;
+    }
 }
 
 .timeline-header {
@@ -132,14 +199,14 @@
 
 .date-stamp {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.2rem;
 }
 
 .timeline-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-heading);
 }
@@ -175,6 +242,14 @@
     font-weight: 900;
     z-index: 2;
     color: white;
+}
+
+.card-description {
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 2;
+    color: white;
+    margin-top: 0.5rem;
 }
 
 .card-image-placeholder {

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal System UX/UI Redesign | Tingyun Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    
+    <header class="project-hero">
+        <div class="hero-bg-wrapper">
+            <img src="../assets/images/redesign_image.png" alt="UX/UI Redesign Background" class="hero-bg-image">
+            <div class="hero-overlay" style="background-color:rgba(220, 141, 13, 0.8);"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-date">2021 - 2025 · adHub Inc.</div>
+            <h1 class="hero-title">UX/UI Redesign</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="project-details-container">
+        <a href="../index.html" class="btn-link back-link-adjusted">← Back to Home</a>
+        <section>
+            <h2 class="project-section-heading">From Data/UX to Redesign</h2>
+            <p class="project-paragraph">I proactively proposed and led a comprehensive UX research & UI redesign and frontend refactoring of our product. By identifying critical usability bottlenecks and modernising the frontend architecture, these design-driven optimizations increased <strong>user satisfaction scores by 45%.</strong></p>
+        </section>
+
+        <section>
+            <h2 class="project-section-heading">Challenge 1: Mobile Accessibility & Layout</h2>
+            <p class="project-paragraph">As a data-intensive platform built originally for desktop, we use the same layout to mobile at first. While system complexity grew, this approach faltered and severely degraded the user experience on smaller screens.<br>Using screen recordings and user surveys, I pinpointed the core friction: poor mobile accessibility caused by interactable areas that were too small. </p>
+
+            <img src="../assets/images/redesign_mobile_challenge.jpg" alt="Mobile UX Research & UI Redesign" class="architecture-img">
+            
+            <h3 class="project-heading">Solution</h3>
+            <p class="project-paragraph">To resolve this, I completely overhauled the mobile architecture. I introduced a fixed bottom navigation bar for effortless thumb-reach, refined the information hierarchy by replacing redundant images with structured typography, and significantly increased primary button hit areas. Finally, I implemented a touch-first layout with collapsible data sections, empowering users to effortlessly navigate complex information without feeling overwhelmed.</p>
+            
+            <img src="../assets/images/redesign_mobile_solution_example.jpg" alt="Mobile UX Research & UI Redesign" class="architecture-img">
+
+            <h3 class="project-heading">Validation via Usability Testing</h3>
+            <p class="project-paragraph">To validate the new layout and flow, I built interactive Figma prototypes and invited four users to conduct task-based usability testing. The testing confirmed the effectiveness of the redesign: all four testers intuitively understood the new flow and completed their assigned tasks smoothly without hesitation.</p>
+        </section>
+
+        <section>
+            <h2 class="project-section-heading">Challenge 2: Information Architecture & Navigation</h2>
+            <p class="project-paragraph">The navigation system was a significant source of user friction. The platform relied on two distinct menus that shared the same hidden location and would automatically swap based on the user's current context. This invisible context-switching left users entirely unaware of secondary features, leading to severe navigational confusion.</p>
+            <img src="../assets/images/redesign_menu_challenge.jpg" alt="Hover-to-Expand Sidebar Navigation" class="architecture-img">
+
+            <h3 class="project-heading">Solutions</h3>
+            <h3 class="project-sub-subheading">a. Permanent Sidebar Menu</h3>
+            <p class="project-paragraph">Instead of completely hiding the main menu, the new design pins a collapsed version (icons only) to the left side. Users can simply hover to expand the menu and read the text labels. This approach maintains context and discoverability without sacrificing screen real estate. Post-launch traffic data showed a 20-30% increase in views for the secondary pages located within this menu.</p>
+            
+            <img src="../assets/images/redesign_menu_solution.jpg" alt="Mobile UX Research & UI Redesign" class="architecture-img">
+
+            <h3 class="project-sub-subheading">b. Contextual Separation of Navigation</h3>
+            <p class="project-paragraph">I separated the previously combined Personal and Company menus. Contextual rules were applied so the Personal menu consistently remained on the left, while the Company menu appeared horizontally beneath the Header only when users navigated into a specific company's context. This clear structural divide successfully eliminated user confusion.</p>
+            <img src="../assets/images/redesign_menu_solution_2.jpg" alt="Mobile UX Research & UI Redesign" class="architecture-img">
+        </section>
+
+    </main>
+
+    <!-- Floating Download CV Button -->
+    <a href="../assets/CV_20260328.pdf" class="download-cv-floating" target="_blank" download="Tingyun_Cheng_CV.pdf">Download CV</a>
+    <script src="../js/main.js"></script>
+    <script src="../js/lightbox.js"></script>
+</body>
+</html>

@@ -44,9 +44,7 @@
             <p class="project-paragraph">For this project, we formed a four-person team tasked with building a RAG system capable of answering queries based on provided documents within a strict one-month timeframe. We were required to use Ollama as our model provider, specifically constrained to the granite4:3b model in a local environment.</p>
         </section>
         <section>
-            <h2 class="project-section-heading">My Main Contribution</h2>
-            
-            <h3 class="project-subheading pt-1-5">Leading the Team via Agile Methodologies</h3>
+            <h2 class="project-section-heading">Agile Project Management & Leadership</h2>
             
             <h3 class="project-sub-subheading">Introducing Backlogs and Kanban Boards</h3>
             <p class="project-paragraph">I introduced straightforward agile management frameworks to the team, utilising a product backlog for task specification and a Kanban board to track our progress. We integrated these tools into our online meetings to ensure strategic alignment and foster highly effective collaboration, which ultimately drove the successful delivery of the project.</p>
@@ -55,27 +53,27 @@
             <p class="project-paragraph">As the project had to be built from the ground up, I structured our development cycle into three distinct phases. We initially dedicated several weeks to research and trials, which culminated in formulating the core architecture. Following this, I implemented a breakdown strategy to address different categories of questions sequentially, ensuring we could systematically deliver the final product.</p>
         </section>
         <section>
-            <h2 class="project-section-heading">Design Router-base Architecture</h2>
+            <h2 class="project-section-heading">Designing a Router-based Architecture</h2>
             <p class="project-paragraph">Following our initial research phase, we identified specific recurrent patterns within the documents and queries. Consequently, I devised a robust routing strategy to handle these varied matched patterns. The system processes queries individually, relying on the Router to dynamically dispatch each query to its appropriate processing chain:</p>
             
             <img src="../assets/images/rag-project_architechture.png" alt="RAG Router Architecture" class="architecture-img">
             
             <ul class="project-list">
-                <li class="project-list-item">
+                <li class="project-list-group">
                     <strong>Summary-Router Chain</strong>
                     <ul class="project-sub-list">
                         <li>Handles queries that match summary-related syntax.</li>
                         <li>This chain mainly addresses “Summary Questions”.</li>
                     </ul>
                 </li>
-                <li class="project-list-item">
+                <li class="project-list-group">
                     <strong>Name-Router Chain</strong>
                     <ul class="project-sub-list">
                         <li>Handles queries that match exactly one or two documents.</li>
                         <li>This chain mainly addresses “Factual Questions” and “Multi-hop Reasoning Questions” with a single document path; while multiple document matches deal with “Multi-doc Info Integration Questions”, “Multi-doc Comparison Questions”, and “Multi-doc Time Sequence Questions”.</li>
                     </ul>
                 </li>
-                <li class="project-list-item">
+                <li class="project-list-group">
                     <strong>LLM-Router Chain</strong>
                     <ul class="project-sub-list">
                         <li>Serves as a fallback for all other queries, which are handled directly by the LLM.</li>
@@ -84,7 +82,7 @@
             </ul>
         </section>
         <section>
-            <h2 class="project-section-heading">Build Development Tools</h2>
+            <h2 class="project-section-heading">Building Internal Development Tools</h2>
             
             <h3 class="project-sub-subheading">Score Dashboard</h3>
             <p class="project-paragraph">I developed a Score Dashboard to visualise experimental results in a tabular format, enabling straightforward comparison of results from each execution, including scores and their corresponding generated answers. This representation made it easier to evaluate and compare the performance of various strategies and configurations.</p>
@@ -105,7 +103,8 @@
     </main>
 
     <!-- Floating Download CV Button -->
-    <a href="../assets/CV_20260325.pdf" class="download-cv-floating" target="_blank" download="Tingyun_Cheng_CV.pdf">Download CV</a>
+    <a href="../assets/CV_20260328.pdf" class="download-cv-floating" target="_blank" download="Tingyun_Cheng_CV.pdf">Download CV</a>
     <script src="../js/main.js"></script>
+    <script src="../js/lightbox.js"></script>
 </body>
 </html>
