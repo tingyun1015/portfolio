@@ -1,6 +1,21 @@
 /* =========================================================================
    PROJECT PAGE SPECIFIC STYLES
    ========================================================================= */
+
+body {
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .project-hero {
     position: relative;
     width: 100%;

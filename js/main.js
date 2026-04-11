@@ -1,39 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const projectCards = document.querySelectorAll('.project-card');
+    const timelines = document.querySelectorAll('.timeline-item');
+    const cards = document.querySelectorAll('.project-card');
+    const buttons = document.querySelectorAll('.filter-btn');
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observerCallback = (entries, observer) => {
+    // --- 1. Animation Observer ---
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
-            }
+            entry.target.classList.toggle('visible', entry.isIntersecting);
+        });
+    }, { threshold: 0.1 });
+
+    const observeVisible = () => {
+        [...timelines, ...cards].forEach(el => {
+            if (!el.classList.contains('hidden')) observer.observe(el);
         });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    // --- 2. Filtering Logic ---
+    const applyFilter = (filterValue) => {
+        // Prepare for fresh animation
+        observer.disconnect();
+        [...timelines, ...cards].forEach(el => el.classList.remove('visible', 'hidden'));
 
-    timelineItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(item);
+        // Apply filtering
+        if (filterValue !== 'all') {
+            cards.forEach(card => {
+                if (card.dataset.category !== filterValue) card.classList.add('hidden');
+            });
+
+            timelines.forEach(item => {
+                const itemCards = item.querySelectorAll('.project-card');
+                const hasVisibleCards = [...itemCards].some(c => !c.classList.contains('hidden'));
+                if (itemCards.length > 0 && !hasVisibleCards) item.classList.add('hidden');
+            });
+        }
+
+        // Re-trigger animations
+        setTimeout(observeVisible, 50);
+    };
+
+    // --- 3. Events & Initialization ---
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilter(btn.dataset.filter);
+        });
     });
 
-    // Handle visibility class addition securely
-    const styleSheet = document.createElement("style");
-    styleSheet.innerText = `
-        .timeline-item.visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(styleSheet);
+    observeVisible();
 });

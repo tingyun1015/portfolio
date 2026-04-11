@@ -88,7 +88,7 @@
 }
 
 .bio-tag {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -0.24px;
@@ -145,6 +145,65 @@
     position: relative;
     padding-bottom: 1px;
     padding-top: 1px;
+}
+
+/* Filter Navigation */
+.filter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    padding: 0.3rem 1.2rem;
+    border-radius: 100px;
+    border: 1.5px solid #e0e4e8;
+    background-color: var(--bg-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: -0.1px;
+}
+
+.filter-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #c0c4c8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn.active {
+    background-color: var(--text-heading);
+    color: white;
+    border-color: var(--text-heading);
+}
+
+/* Visibility State */
+.project-card.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: none;
+                
+}
+
+.timeline-item.hidden {
+    display: none;
+}
+
+.timeline-item, .project-card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.timeline-item.visible, .project-card.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.8s cubic-bezier(0.16, 0.8, 0.7, 1), 
+                transform 0.8s cubic-bezier(0.16, 0.8, 0.7, 1);
 }
 
 .timeline-item {

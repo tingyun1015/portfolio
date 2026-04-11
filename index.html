@@ -24,7 +24,7 @@
                 <div class="bio-text">
                     <p class="bio-tag">7+ Years Industrial Experience</p>
                     <h1 class="name-title">Tingyun (Anna) Cheng</h1>
-                    <p>An enthusiastic <strong>product-minded software engineer</strong> who bridges the gap between <strong>design</strong>, <strong>development</strong>, and <strong>digital marketing</strong>.</p>
+                    <p>A <strong>product-minded Software Engineer</strong> who leverages a holistic view of the product lifecycle, combining deep expertise in <strong>design</strong>, <strong>development</strong>, and <strong>marketing</strong>.</p>
                 </div>
                 <div class="contact-links">
                     <a href="assets/CV_20260403.pdf" class="btn-link" target="_blank" download="Tingyun_Cheng_CV.pdf">Download CV</a>
@@ -47,7 +47,12 @@
 
         <!-- RIGHT COLUMN (Scrollable on desktop) -->
         <main class="right-column">
-
+            <nav class="filter-nav">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="dev">DEV</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </nav>
             <!-- Timeline Item 1 -->
             <section class="timeline-item">
                 <div class="timeline-header">
@@ -57,7 +62,7 @@
 
                 <div class="project-cards">
                     <!-- Project Card -->
-                    <a href="projects/human-ai.html" class="project-card" style="--card-bg: rgba(216,78,47,0.7);">
+                    <a href="projects/human-ai.html" class="project-card" data-category="design" style="--card-bg: rgba(216,78,47,0.7);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/human-ai_image.jpg" alt="Human AI Interaction Research" class="card-mockup-image">
                         <h3 class="card-title">Human AI Interaction Research</h3>
@@ -65,7 +70,7 @@
                     </a>
 
                     <!-- Project Card -->
-                    <a href="projects/rag-qa.html" class="project-card" style="--card-bg: rgba(3,113,197,0.7);">
+                    <a href="projects/rag-qa.html" class="project-card" data-category="dev" style="--card-bg: rgba(3,113,197,0.7);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/rag-project_image.png" alt="RAG-based QA Assistant" class="card-mockup-image">
                         <h3 class="card-title">RAG-based QA Assistant (Teamwork)</h3>
@@ -82,20 +87,20 @@
                 </div>
                 <div class="project-cards">
                     <!-- Project Card -->
-                    <a href="projects/engineer.html" class="project-card" style="--card-bg: rgba(3,113,197,0.7);">
+                    <a href="projects/engineer.html" class="project-card" data-category="dev" style="--card-bg: rgba(3,113,197,0.7);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/engineer_image.png" alt="Full-Stack Development & Architecture" class="card-mockup-image">
                         <h3 class="card-title">Full-Stack Development</h3>
                         <p class="card-description">React, JavaScript, Laravel, PHP, SQL</p>
                     </a>
                     <!-- Project Card -->
-                    <a href="projects/uiux.html" class="project-card" style="--card-bg: rgba(255, 157, 0, 0.7);">
+                    <a href="projects/uiux.html" class="project-card" data-category="design" style="--card-bg: rgba(255, 157, 0, 0.7);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/redesign_image.png" alt="UX/UI Redesign" class="card-mockup-image">
                         <h3 class="card-title">UX/UI Redesign</h3>
                     </a>
                     <!-- Project Card -->
-                    <a href="projects/frontend.html" class="project-card" style="--card-bg: rgba(3,113,197,0.7);">
+                    <a href="projects/frontend.html" class="project-card" data-category="dev" style="--card-bg: rgba(3,113,197,0.7);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/frontend_image.png" alt="Frontend Exercise" class="card-mockup-image">
                         <h3 class="card-title">Frontend Prototypes & Exercises</h3>
@@ -113,13 +118,13 @@
                 </div>
                 <div class="project-cards">
                     <!-- Project Card -->
-                    <a href="projects/dsa.html" class="project-card" style="--card-bg: rgba(235, 172, 0, 0.8);">
+                    <a href="projects/dsa.html" class="project-card" data-category="marketing" style="--card-bg: rgba(235, 172, 0, 0.8);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/DSA_image.png" alt="Golden Award for Best Programmatic Buying" class="card-mockup-image">
                         <h3 class="card-title">Golden Award for Best Programmatic Buying</h3>
                     </a>
                     <!-- Project Card -->
-                    <a href="projects/marketing.html" class="project-card" style="--card-bg: rgba(0, 160, 220, 0.6);">
+                    <a href="projects/marketing.html" class="project-card" data-category="marketing" style="--card-bg: rgba(0, 160, 220, 0.6);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/marketing_image.png" alt="Product Marketing" class="card-mockup-image">
                         <h3 class="card-title">Product Marketing</h3>
@@ -134,7 +139,7 @@
                     <h3 class="timeline-title">BFA in Design, National Taiwan Normal University</h3>
                 </div>
                 <!-- Project Card -->
-                    <a href="projects/design.html" class="project-card" style="--card-bg: rgba(23, 33, 70, 0.7);">
+                    <a href="projects/design.html" class="project-card" data-category="design" style="--card-bg: rgba(23, 33, 70, 0.7);">
                         <div class="card-overlay"></div>
                         <img src="assets/images/design_image.png" alt="Senior Project" class="card-mockup-image">
                         <h3 class="card-title">Senior Project</h3>
