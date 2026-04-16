@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Apply filtering
         if (filterValue !== 'all') {
             cards.forEach(card => {
-                if (card.dataset.category !== filterValue) card.classList.add('hidden');
+                const categories = (card.dataset.category || '').split(' ');
+                if (!categories.includes(filterValue)) {
+                    card.classList.add('hidden');
+                }
             });
 
             timelines.forEach(item => {
