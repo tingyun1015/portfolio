@@ -127,8 +127,11 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Layout Overrides for RAG-QA Elements */
 .hero-rag-qa {
+    --hero-color: rgba(0, 153, 163, 0.7);
+}
+
+.hero-credit-audit {
     --hero-color: rgba(3, 113, 197, 0.7);
 }
 
@@ -264,4 +267,33 @@ body {
 
 .project-details-container img:hover {
     opacity: 0.9;
+}
+
+/* Side-by-side image layout */
+.image-row {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 960px;
+    align-items: flex-start;
+}
+.image-row .architecture-img {
+    margin: 0;
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
+/* Directory Tree */
+.directory-tree {
+    background-color: #2f2c2b;
+    color: #f8f4e9;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }

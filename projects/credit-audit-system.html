@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduate Credit Audit System | Tingyun Cheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+    
+    <header class="project-hero hero-credit-audit">
+        <div class="hero-bg-wrapper">
+            <img src="../assets/images/dbms_image.png" alt="Graduate Credit Audit System Hero Background" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-date">Spring 2026</div>
+            <h1 class="hero-title">Graduate Credit Audit System (Teamwork)</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="project-details-container">
+        <a href="../index.html" class="btn-link back-link-adjusted">← Back to Home</a>
+        <section>
+            <h2 class="project-section-heading">Background</h2>
+            <h3 class="project-subheading">Course: Database System</h3>
+            <p class="project-paragraph">As part of the <i>“Database System”</i> course at NCCU, our team developed a comprehensive Graduate Credit Audit System to verify academic requirements for graduation. The platform simplifies the complex process of degree auditing by integrating a robust relational database with an intuitive web dashboard, enabling students to effortlessly track their progress and verify their graduation eligibility.</p>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Tech Stack</h2>
+            <h3 class="project-subheading">React, TypeScript, Python, PostgreSQL, SQLAlchemy, Docker</h3>
+        </section>
+        <section>
+            <h2 class="project-section-heading">Project Repository</h2>
+            <p class="project-paragraph"><a href="https://github.com/tingyun1015/Graduate_Degree_Audit_System" target="_blank" class="btn-link btn-link-large">https://github.com/tingyun1015/Graduate_Degree_Audit_System</a></p>
+        </section>
+        <section>
+            <h2 class="project-section-heading">System Architecture & Features</h2>
+            <p class="project-paragraph">Built from the ground up, this system focuses on a comprehensive relational database design and seamless full-stack integration.</p>
+            <ul class="project-list">
+                <li class="project-list-group">
+                    <strong>Relational Database Design</strong>
+                    <img src="../assets/images/dbms_er_diagram.png" alt="ER Model Diagram" class="architecture-img mt-2">
+                    <ul class="project-sub-list">
+                        <li>Architected a robust relational schema in PostgreSQL, covering core entities such as users, students, academic programs, courses, and complex requirement rules.</li>
+                        <li>Leveraged SQLAlchemy as the Object-Relational Mapper (ORM) to execute complex queries and maintain strict data integrity.</li>
+                    </ul>
+                </li>
+                <li class="project-list-group">
+                    <strong>Full-Stack Implementation</strong>
+                    <ul class="project-sub-list">
+                        <li>Developed a Python-based backend that exposes RESTful APIs for efficient data retrieval and degree rule evaluation.</li>
+                        <li>Built a responsive and intuitive user dashboard using React and TypeScript.</li>
+                    </ul>
+                </li>
+                <li class="project-list-group">
+                    <strong>Deployment & Testing</strong>
+                    <ul class="project-sub-list">
+                        <li>Containerised the application using Docker, orchestrating a multi-container environment (backend, frontend, database, db-init) via Docker Compose.</li>
+                        <li>Implemented automated database initialisation and data seeding scripts to guarantee consistent development and testing workflows.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="project-section-heading">My Contributions</h2>
+            <ul class="project-list">
+                <li class="project-list-group">
+                    <strong>UI/UX Design</strong>
+                    <ul class="project-sub-list">
+                        <li>Led the UI/UX design, crafting an intuitive and user-centric web dashboard tailored for academic auditing.</li>
+                    </ul>
+                    <div class="image-row">
+                        <img src="../assets/images/dbms_img1.png" alt="Dashboard Interface 1" class="architecture-img">
+                        <img src="../assets/images/dbms_img2.png" alt="Dashboard Interface 2" class="architecture-img">
+                    </div>
+                </li>
+                <li class="project-list-group">
+                    <strong>ER Model Design</strong>
+                    <ul class="project-sub-list">
+                        <li>Designed the comprehensive Entity-Relationship (ER) model, establishing the foundational data structures and complex entity relationships required for the degree audit logic.</li>
+                    </ul>
+                </li>
+                <li class="project-list-group">
+                    <strong>Frontend Architecture & Implementation</strong>
+                    <ul class="project-sub-list">
+                        <li>Spearheaded the frontend development utilizing React and TypeScript.</li>
+                        <li>Designed and enforced rigorous TypeScript interfaces, ensuring type safety and reducing runtime errors across the application.</li>
+                        <li>Structured a scalable and maintainable component directory architecture:
+                            <pre class="directory-tree">
+frontend/src/
+├── pages/       # Contains all application pages with respective Page.tsx and styles.
+├── components/  # Contains reusable UI components.
+└── App.tsx      # Main application component, handles the routing configuration.</pre>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Floating Download CV Button -->
+    <a href="../assets/CV_TingyunCheng.pdf" class="download-cv-floating" target="_blank" download="Tingyun_Cheng_CV.pdf">Download CV</a>
+    <script src="../js/main.js"></script>
+    <script src="../js/lightbox.js"></script>
+</body>
+</html>

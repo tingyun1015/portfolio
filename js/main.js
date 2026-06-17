@@ -51,5 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    observeVisible();
+    const activeBtn = document.querySelector('.filter-btn.active');
+    if (activeBtn) {
+        applyFilter(activeBtn.dataset.filter);
+    } else {
+        observeVisible();
+    }
 });
