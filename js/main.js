@@ -51,9 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const activeBtn = document.querySelector('.filter-btn.active');
-    if (activeBtn) {
-        applyFilter(activeBtn.dataset.filter);
+    // --- 4. URL Parameter Parsing ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    
+    let targetBtn = null;
+    if (tabParam) {
+        targetBtn = document.querySelector(`.filter-btn[data-filter="${tabParam}"]`);
+    }
+    
+    if (!targetBtn) {
+        targetBtn = document.querySelector('.filter-btn.active');
+    }
+
+    if (targetBtn) {
+        buttons.forEach(b => b.classList.remove('active'));
+        targetBtn.classList.add('active');
+        applyFilter(targetBtn.dataset.filter);
     } else {
         observeVisible();
     }
